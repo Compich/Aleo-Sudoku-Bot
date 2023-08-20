@@ -31,6 +31,8 @@ Follow these steps for a smooth installation:
 4. Proceed to `telegram_bot/config`
 5. Rename `example.py` to `__init.py__`
 6. Edit `example.py` in your preferred text editor and set the necessary values.
+7. Repeat the database configuration in the `telegram_bot/alembic.ini` file on line 63 in the `sqlalchemy.url` parameter
+8. Run the `alembic upgrade head` command to create all tables in the database
 
 ### ⚙️ Configuration Details
 - `LEO_EXECUTABLE`: Path to the executable file for Leo.
