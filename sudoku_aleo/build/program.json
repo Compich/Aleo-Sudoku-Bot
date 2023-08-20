@@ -1,0 +1,6 @@
+{
+    "program": "sudoku_aleo.aleo",
+    "version": "1.0.0",
+    "description": "An application for checking the correctness of a Sudoku solution in the Aleo blockchain",
+    "license": "MIT"
+}
