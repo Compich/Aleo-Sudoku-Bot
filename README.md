@@ -8,7 +8,7 @@
 This project showcases the seamless integration between the cutting-edge language of the future, **🦁 Leo** from the Aleo team, and a Python-based Telegram bot. The goal? To validate Sudoku solutions and engage users in thrilling Sudoku challenges!
 
 ## 🎥 Video Demonstration
-Watch our [YouTube video demonstration](https://www.youtube.com/watch?v=PLACEHOLDER) for a hands-on look into how the bot works!
+Watch our [YouTube video demonstration](https://youtube.com/shorts/YxGKan5vnx4?feature=share) for a hands-on look into how the bot works!
 
 ## ✨ Features
 - **Sudoku Generation**: Automatic generation of Sudoku puzzles ranging from easy to extreme difficulties.
@@ -71,7 +71,7 @@ For example:<br>
 }"
 ```
 
-If the output is `0`, congrats! Your Sudoku is spot-on. Any other number indicates an error. Numbers from `1-9` denote issues in rows, while `10-18` indicate columns (e.g., 10 means the 1st column).
+`check_for_complete` is, in fact, the only function (except for the auxiliary check_sequence, which checks if there are any duplicates or missing values in a sequence of 9 cells). In this function, all 9 rows are checked sequentially, and then 9 columns are checked using the check_for_complete function.<br>If the output is `0`, congrats! Your Sudoku is spot-on. Any other number indicates an error. Numbers from `1-9` denote issues in rows, while `10-18` indicate columns (e.g., 10 means the 1st column).
 
 ## 🏆 Final Note
 Best of luck! We hope to see you at the top of the leaderboard! 🌟
