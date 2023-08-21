@@ -24,6 +24,7 @@ class Game(Base):
     difficulty: Mapped[enums.SudokuDifficulty] = mapped_column(
         Enum(enums.SudokuDifficulty, name='sudoku_difficulty')
     )
+    start_board_str: Mapped[str_81]
     board_str: Mapped[str_81]
     start_time: Mapped[dt.datetime] = mapped_column(
         DateTime(timezone=True),

@@ -128,6 +128,7 @@ async def create_new_game_cb(
     game = await dbm.Game.add_new(
         user_id=call.from_user.id,
         difficulty=enums.SudokuDifficulty(callback_data.difficulty),
+        start_game_str=board_str,
         board_str=board_str
     )
 
@@ -170,6 +171,15 @@ async def edit_value_cb(
     game = await dbm.Game.get_pk(callback_data.game_id)
 
     if game.user_id != call.from_user.id:
+        return
+
+    position = callback_data.row * 9 + callback_data.column
+
+    if game.start_board_str[position] != '0':
+        await call.answer(
+            text='You can\'t change this value',
+            show_alert=True
+        )
         return
 
     edit_value_message = await msggen.get_edit_value_message(
