@@ -16,6 +16,17 @@ Watch our [YouTube video demonstration](https://youtube.com/shorts/YxGKan5vnx4?f
 - **Aleo Wallet Integration**: Create a wallet in the Aleo network. This opens up avenues for deeper blockchain interactions, like Sudoku speed challenges or player competitions.
 - **Wallet Display Control**: Choose whether to show or hide your wallet address among the top players.
 
+## 📜 Sudoku Rules
+
+Sudoku is a classic number puzzle game. The objective is to fill a 9x9 grid with digits so that each column, each row, and each of the nine 3x3 sub-grids (also known as boxes or regions) contain all of the digits from 1 to 9.
+
+1. **Numbers 1-9**: The 9x9 grid must be filled with digits ranging from 1 to 9.
+2. **No Repetition**: No number can appear more than once in:
+   - Any single row
+   - Any single column
+   - Any single 3x3 box
+3. **Complete the Puzzle**: The entire grid must be filled without violating the first two rules.
+
 ## 📂 Project Structure
 The project is bifurcated into:
 1. 🦁 Leo Code
@@ -54,8 +65,7 @@ If you fancy running the **🦁 Leo** module solo:
 2. Run `leo run check_for_complete "FIELD"`
 
 Replace `FIELD` with a string in this format:
-"{ r1: { c1: 7u8, c2: 0u8, ... }, r2: { c1: ... } ... r9: { c1: ... } }"
-
+"{ r1: { c1: 7u8, c2: 0u8, ... }, r2: { c1: ... } ... r9: { c1: ... } }", where `r1` to `r9` denote rows, and `c1` to `c9` denote columns.<br>
 For example:<br>
 ```
 "{ 
